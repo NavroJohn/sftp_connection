@@ -1,7 +1,8 @@
 # sftp_client
 
 This script uses the paramiko module to make a connection to Draxis sftp server
-where the Africultures servises are storeddatetime A combination of a date and a time. Attributes: ()
+where the Africultures servises are storeddatetime A combination of a date and a time.
+
 You need to set the path for the id_rsa file, the keypass for that file 
 If you want to upload any files in the server you must define the loacl and remote paths.
 TODO:
