@@ -32,18 +32,17 @@ def create_client(host, port, username, keypath, keypass):
     print(sftp.listdir())
 
 
-host = "18.196.31.48"
-port = 2310
+host = os.getenv("host")
+port = int(os.getenv("port"))
+username = os.getenv("username")
 keypath = os.getenv("keypath")
 keypass = os.getenv("keypass")
-# Insert the keypas for your ssh key 
-username = "user1"
 
-create_client(host= host, port=port, username=username, keypath=keypath, keypass=keypass)
+create_client(host=host, port=port, username=username, keypath=keypath, keypass=keypass)
 
 # Uncomment of you want to upload files
-localPath = ""
-remotePath = ""
+# localPath = ""
+# remotePath = ""
 
 # sftp.put(localpath=localPath, remotepath=remotePath)
 
