@@ -1,0 +1,2 @@
+keypath = "your/path/to/the/id_rsa # Insert the path of the id_rsa file.
+keypass = "Your keep to decrypt the id_rsa file" # Insert the keypas for your ssh key 

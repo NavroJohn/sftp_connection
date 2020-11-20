@@ -1,4 +1,8 @@
+import os
 import paramiko
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 '''
 This script uses the paramiko module to make a connection to Draxis sftp server
@@ -30,15 +34,16 @@ def create_client(host, port, username, keypath, keypass):
 
 host = "18.196.31.48"
 port = 2310
-keypath = "" # Insert the path of the id_rsa file.
-keypass = "" # Insert the keypas for your ssh key 
+keypath = os.getenv("keypath")
+keypass = os.getenv("keypass")
+# Insert the keypas for your ssh key 
 username = "user1"
 
 create_client(host= host, port=port, username=username, keypath=keypath, keypass=keypass)
 
-## Uncomment of you want to upload files
-# localPath = ""
-# remotePath = ""
+# Uncomment of you want to upload files
+localPath = ""
+remotePath = ""
 
 # sftp.put(localpath=localPath, remotepath=remotePath)
 
