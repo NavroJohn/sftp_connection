@@ -7,7 +7,7 @@ load_dotenv()
 '''
 This script uses the paramiko module to make a connection to an sftp server. 
 
-You need to set the path for the id_rsa file and the keypass for that file 
+You need to set the path for the id_rsa file and the keypass for that file.
 
 If you want to upload any files in the server you must define the local and remote paths.
 
@@ -23,6 +23,15 @@ Credits:
 '''
 
 def create_client(host, port, username, keypath, keypass):
+    '''
+
+    :param host: The server address
+    :param port: The port
+    :param username: Specify the name of the user
+    :param keypath: Specify the location of the id_rsa file in your machine
+    :param keypass: Specify the password for the id_rsa key
+
+    '''
     global transport
     transport = paramiko.Transport((host, port))
     mykey = paramiko.RSAKey.from_private_key_file(keypath, keypass)
